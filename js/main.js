@@ -17,8 +17,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 /**
  * Register the service worker.
  */
-
- /*
 registerServiceWorker = () => {
   if (!navigator.serviceWorker) return;
 
@@ -28,7 +26,6 @@ registerServiceWorker = () => {
     console.log('Service worker registration failed', error);
   });
 }
-*/
 
 /**
  * Fetch all neighborhoods and set their HTML.
@@ -90,10 +87,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-        center: [40.722216, -73.987501],
-        zoom: 12,
-        scrollWheelZoom: false
-      });
+    center: [40.722216, -73.987501],
+    zoom: 12,
+    scrollWheelZoom: false
+  });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoiamQxMDIzMSIsImEiOiJjampia252Y3EzaGszM3JzMmo3c3E5ZGx4In0.iPAcUll2B5Lm_cIxpp8xLg',
     maxZoom: 18,
@@ -211,6 +208,7 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
+
     function onClick() {
       window.location.href = marker.options.url;
     }

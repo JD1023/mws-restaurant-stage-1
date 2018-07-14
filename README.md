@@ -18,7 +18,7 @@ In a terminal, check the version of Python you have: `python -V`. If you have Py
 
 2. With your server running, visit the site: `http://localhost:8000` to see the app working.
 
-3. Alternatively you can view the site online by visiting this url: https://restaurantreviews1--jd1023.repl.co/
+3. Alternatively you can view the site online by visiting this URL: https://restaurantreviews1--jd1023.repl.co/
 
 ## Leaflet.js and Mapbox:
 
